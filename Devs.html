@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="assets/ICO.png">
+    <title>Developer Info - Mateusz Dymowski Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .moving-bg {
+            background: linear-gradient(45deg, #000000, #61616a, #fefeff);
+            background-size: 400% 400%;
+            animation: gradientBG 7s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .dev-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 800px;
+            width: 90%;
+        }
+        h1, h2 {
+            color: #303b3d;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #303b3d;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background-color: #303b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border 0.3s ease;
+            border: 2px solid #FFD700;
+        }
+        .back-button:hover {
+            background-color: #4a5c5f;
+            border-color: #FFA500;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="moving-bg">
+    <div class="dev-container">
+        <div id="pin-form" style="text-align: center;">
+            <h2>Enter Developer PIN</h2>
+            <input type="password" id="pin-input" maxlength="4">
+            <button onclick="checkPin()">Submit</button>
+        </div>
+        <div id="dev-content" style="display: none;">
+            <h1>Developer Information</h1>
+            <h2>Project Structure</h2>
+            <pre>
+            Main Portfolio/
+            ├── index.html
+            ├── Devs.html
+            ├── Drzewo.txt
+            ├── assets/
+            │   ├── changelog-icon.png
+            │   ├── CL2.png
+            │   ├── CL3.png
+            │   ├── DSLR.png
+            │   ├── EM.png
+            │   ├── GH.png
+            │   ├── ICO.png
+            │   ├── IG.png
+            │   ├── kursor.png
+            │   ├── LR.png
+            │   ├── LV.png
+            │   ├── PFP.png
+            │   ├── projekt1.png
+            │   ├── PS.png
+            │   ├── TP.png
+            │   └── VSC.png
+            ├── zdjecia/
+            │   ├── Zdjecie1.jpg
+            │   ├── Zdjecie2.jpg
+            │   ├── Zdjecie3.jpg
+            │   ├── Zdjecie4.jpg
+            │   ├── Zdjecie5.jpg
+            │   ├── Zdjecie6.jpg
+            │   ├── Zdjecie7.jpg
+            │   └── Zdjecie8.jpg
+            ├── EN/
+            │   └── [Same structure as root assets and zdjecia]
+            └── PL/
+                ├── PL.html
+                ├── project1.html
+                ├── Timeline.html
+                ├── assets/
+                │   └── [Same structure as root assets]
+                ├── zdjecia/
+                │   └── [Same structure as root zdjecia]
+                └── pr1/
+                    ├── index.html
+                    ├── script.js
+                    └── style.css
+            </pre>            
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 (with animations)</li>
+                <li>JavaScript (for dynamic elements)</li>
+            </ul>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Responsive design</li>
+                <li>Multi-language support</li>
+                <li>Animated background</li>
+                <li>Interactive elements (clock, calendar)</li>
+            </ul>
+            <h2>Przewodnik stylów</h2>
+<p>Kolory: #000000, #61616a, #fefeff (tło gradientowe)</p>
+<p>Akcenty: #FFD700 (złoty), #FFA500 (pomarańczowy)</p>
+<p>Czcionka: Arial, sans-serif</p>
+<p>Animacje: fadeIn, gradientBG</p>
+
+<h2>Znane problemy i planowane ulepszenia</h2>
+<ul>
+    <li>Dodanie więcej interaktywnych elementów do strony głównej</li>
+    <li>Rozszerzenie funkcjonalności kalendarza</li>
+    <li>Implementacja pełnego systemu uwierzytelniania dla strony deweloperskiej</li>
+    <li>Optymalizacja ładowania zasobów dla szybszego renderowania strony</li>
+</ul>
+<h2>Changelog</h2>
+<ul>
+    <li><strong>v1.1.0</strong> - Dodano interaktywny  zegar</li>
+    <li><strong>v1.0.1</strong> - Poprawiono responsywność na urządzeniach mobilnych</li>
+    <li><strong>v1.0.0</strong> - Pierwsze wydanie z podstawową funkcjonalnością</li>
+</ul>
+<h2>Galeria komponentów UI</h2>
+<div class="ui-components">
+    <div class="component">
+        <h3>Przycisk języka</h3>
+        <a href="#" class="language-button">Przykładowy język</a>
+    </div>
+    <div class="component">
+        <h3>Zegar</h3>
+        <div id="clock-example">12:00:00</div>
+    </div>
+    <div class="component">
+        <h3>Kalendarz</h3>
+        <div id="calendar-example">
+            <div id="day-example">Pon</div>
+            <div id="date-example">15</div>
+        </div>
+    </div>
+</div>
+<h2>Przydatne zasoby</h2>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - Dokumentacja web technologii</li>
+    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - Porady i triki CSS</li>
+    <li><a href="https://github.com/" target="_blank">GitHub</a> - Platforma do hostingu kodu</li>
+    <li><a href="https://codepen.io/" target="_blank">CodePen</a> - Społeczność do testowania i udostępniania fragmentów kodu</li>
+</ul>
+            <a href="index.html" class="back-button">Back to Main Page</a><p>&COPY Mateusz</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPin() {
+            const correctPin = "0197"; // Ustaw tutaj właściwy PIN
+            const enteredPin = document.getElementById("pin-input").value;
+            if (enteredPin === correctPin) {
+                document.getElementById("pin-form").style.display = "none";
+                document.getElementById("dev-content").style.display = "block";
+            } else {
+                alert("Incorrect PIN. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
